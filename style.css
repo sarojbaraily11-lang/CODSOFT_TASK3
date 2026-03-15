@@ -47,10 +47,19 @@ button {
 
 button:active {
     box-shadow: 0 2px #1e272e;
-    transform:translate(2px);
+    transform:translate(1px);
 }
 
 body {
     background-color: skyblue;
 }
+
+.plus {
+    grid-row: span 2;
+    height: 100%;
+}
+.wide {
+    grid-column: span 2;
+}
+
 
