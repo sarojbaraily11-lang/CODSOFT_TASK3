@@ -1,17 +1,22 @@
-function append(value) {
-    document.getElementById("display").value += value;
+let display = document.getElementById("display");
+
+function press(value) {
+    display.value += value;
 }
 
 function clearDisplay() {
-    document.getElementById("display").value = "";
+    display.value = "";
+}
+
+function deleteLast() {
+    display.value = display.value.slice(0,-1);
 }
 
 function calculate() {
     try {
-        let result = document.getElementById("display").value;
-        document.getElementById("display").value = eval(result);
-    } catch (error) {
-        document.getElementById("display").value = "Error";
+        display.value = eval(display.value);
+    } catch {
+        display.value = "Error";
     }
 }
 
